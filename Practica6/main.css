@@ -1,0 +1,111 @@
+/* Reset de estilos */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+table,
+th,
+td,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 20px;
+}
+
+/* Estilo para el encabezado */
+#cabeceraPagina {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para la tabla de datos */
+#tablaDatos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tablaDatos th,
+#tablaDatos td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#tablaDatos th {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Estilo para el contenedor de ocultar columnas */
+#contenedorOcultarColumnas {
+    margin-top: 20px;
+}
+
+/* Estilo para el botón de aplicar estilos */
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#contenedorOculatarColumnas {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 3%;
+}
+
+
+/* Estilo para los divs dentro de #contenedorEstilos */
+.opcionesTabla,
+.opcionesTema {
+    width: 100%;
+    /* Ocupar el ancho completo */
+    box-sizing: border-box;
+    /* Incluye el padding y border en el ancho total */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    /* Ajusta el espacio entre los dos divs */
+}
+
+.opcionesTabla h2,
+.opcionesTema h2 {
+    text-align: center;
+}
+
+#contenedorEstilos {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del contenedor a columna */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contenedorOpciones {
+    display: flex;
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="funciones.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <header id="cabeceraPagina">
+        <h1>BricoArte</h1>
+    </header>
+    <div id="contenedorEstilos">
+        <div id="contenedorOpciones">
+            <div class="opcionesTabla">
+                <h2>Opciones de Tabla</h2>
+                <div>
+                    <label for="colorBordes">Color de Bordes:</label>
+                    <input type="color" id="colorBordes">
+                </div>
+                <div>
+                    <label for="colorFondo">Color de Fondo:</label>
+                    <input type="color" id="colorFondo">
+                </div>
+                <div>
+                    <label for="tamanhoLetra">Tamaño de Letra:</label>
+                    <select id="tamanhoLetra">
+                        <option value="12">12px</option>
+                        <option value="16">16px</option>
+                        <option value="20">20px</option>
+                        <option value="24">24px</option>
+                        <option value="36">36px</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fuente">Fuente:</label>
+                    <input type="text" id="fuente">
+                </div>
+                <div>
+                    <label for="colorLetra">Color de Letra:</label>
+                    <input type="color" id="colorLetra">
+                </div>
+            </div>
+            <div class="opcionesTema">
+                <h2>Opciones de Tema</h2>
+                <div>
+                    <label for="colorCabecera">Color de Cabecera:</label>
+                    <input type="color" id="colorcabecera">
+                </div>
+                <div>
+                    <label for="colorFondoPagina">Color de Fondo Página:</label>
+                    <input type="color" id="colorFondoPagina">
+                </div>
+                <div>
+                    <label for="colorContenedorOpciones">Color de Contenedor Opciones:</label>
+                    <input type="color" id="colorContenedorOpciones">
+                </div>
+            </div>
+        </div>
+        
+        <button onclick="aplicarEstilos()">Aplicar Estilos</button>
+    </div>
+    
+
+    <table id="tablaDatos">
+        <thead>
+            <tr>
+                <th>Ciudad y Domicilio</th>
+                <th>Descripción de Reparaciones</th>
+                <th>Fecha Reparaciones</th>
+                <th>Horas de Trabajo</th>
+                <th>Coste Total Reparaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Barcelona - Calle Gaudí, 123</td>
+                <td>Reparación de instalación eléctrica</td>
+                <td>2023-01-05</td>
+                <td>5</td>
+                <td>€500</td>
+            </tr>
+            <tr>
+                <td>Madrid - Paseo del Retiro, 45</td>
+                <td>Reparación de fontanería</td>
+                <td>2023-02-12</td>
+                <td>3</td>
+                <td>€300</td>
+            </tr>
+            <tr>
+                <td>Valencia - Avenida de las Ciencias, 76</td>
+                <td>Reparación de caldera</td>
+                <td>2023-03-20</td>
+                <td>4</td>
+                <td>€400</td>
+            </tr>
+            <tr>
+                <td>Sevilla - Calle de la Giralda, 8</td>
+                <td>Mantenimiento de jardín</td>
+                <td>2023-04-08</td>
+                <td>6</td>
+                <td>€600</td>
+            </tr>
+            <tr>
+                <td>Barcelona - Carrer de Gràcia, 210</td>
+                <td>Reparación de aire acondicionado</td>
+                <td>2023-05-15</td>
+                <td>2</td>
+                <td>€200</td>
+            </tr>
+            <tr>
+                <td>Madrid - Calle de Serrano, 67</td>
+                <td>Reparación de cerraduras</td>
+                <td>2023-06-22</td>
+                <td>3</td>
+                <td>€250</td>
+            </tr>
+            <tr>
+                <td>Valencia - Calle de las Artes, 34</td>
+                <td>Reparación de tejado</td>
+                <td>2023-07-11</td>
+                <td>8</td>
+                <td>€800</td>
+            </tr>
+            <tr>
+                <td>Sevilla - Plaza de España, 15</td>
+                <td>Pintura interior</td>
+                <td>2023-08-29</td>
+                <td>5</td>
+                <td>€500</td>
+            </tr>
+            <tr>
+                <td>Barcelona - Rambla de Catalunya, 89</td>
+                <td>Reparación de electrodomésticos</td>
+                <td>2023-09-17</td>
+                <td>2</td>
+                <td>€150</td>
+            </tr>
+            <tr>
+                <td>Madrid - Calle de Alcalá, 123</td>
+                <td>Reparación de persianas</td>
+                <td>2023-10-05</td>
+                <td>4</td>
+                <td>€400</td>
+            </tr>
+            <tr>
+                <td>Valencia - Avenida del Mar, 56</td>
+                <td>Reparación de suelos</td>
+                <td>2023-11-18</td>
+                <td>7</td>
+                <td>€700</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="contenedorOculatarColumnas">
+        <div>
+            <input id="domicilio" type="checkbox" />domicilio
+        </div>
+        <div>
+            <input id="descripcion" type="checkbox" />descripcion
+        </div>
+        <div>
+            <input id="fecha" type="checkbox" />fecha
+        </div>
+        <div>
+            <input id="horas" type="checkbox" />horas
+        </div>
+        <div>
+            <input id="coste" type="checkbox" />coste
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#domicilio").change(function(){
+                var columnIndex = 0;
+                var cells = $("#tablaDatos tbody tr td:nth-child(" + (columnIndex + 1) + "), #tablaDatos thead tr th:nth-child(" + (columnIndex + 1) + ")");
+                if ($(this).is(":checked")) {
+                    cells.hide();
+                } else {
+                    cells.show();
+                }
+            });
+
+            $("#descripcion").change(function(){
+                var columnIndex = 1;
+                var cells = $("#tablaDatos tbody tr td:nth-child(" + (columnIndex + 1) + "), #tablaDatos thead tr th:nth-child(" + (columnIndex + 1) + ")");
+                if ($(this).is(":checked")) {
+                    cells.hide();
+                } else {
+                    cells.show();
+                }
+            });
+
+            $("#fecha").change(function(){
+                var columnIndex = 2;
+                var cells = $("#tablaDatos tbody tr td:nth-child(" + (columnIndex + 1) + "), #tablaDatos thead tr th:nth-child(" + (columnIndex + 1) + ")");
+                if ($(this).is(":checked")) {
+                    cells.hide();
+                } else {
+                    cells.show();
+                }
+            });
+
+            $("#horas").change(function(){
+                var columnIndex = 3;
+                var cells = $("#tablaDatos tbody tr td:nth-child(" + (columnIndex + 1) + "), #tablaDatos thead tr th:nth-child(" + (columnIndex + 1) + ")");
+                if ($(this).is(":checked")) {
+                    cells.hide();
+                } else {
+                    cells.show();
+                }
+            });
+
+            $("#coste").change(function(){
+                var columnIndex = 4;
+                var cells = $("#tablaDatos tbody tr td:nth-child(" + (columnIndex + 1) + "), #tablaDatos thead tr th:nth-child(" + (columnIndex + 1) + ")");
+                if ($(this).is(":checked")) {
+                    cells.hide();
+                } else {
+                    cells.show();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
