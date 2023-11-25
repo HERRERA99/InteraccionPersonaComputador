@@ -14,6 +14,12 @@ div {
     padding: 0;
 }
 
+th img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px; /* Ajusta el margen según tus preferencias */
+  }
+
 /* Estilo para el cuerpo de la página */
 body {
     font-family: Arial, sans-serif;
@@ -109,3 +115,23 @@ button:hover {
 #contenedorOpciones {
     display: flex;
 }
+
+#contenedorOcultarColumnas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border: 2px solid #45a049;
+    border-radius: 10px;
+    background-color: #b2d8b2;
+}
+
+#contenedorOcultarColumnas div {
+    margin: 5px;
+}
+
+#contenedorOcultarColumnas input {
+    margin-right: 10px;
+}
+

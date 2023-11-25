@@ -18,11 +18,11 @@
                 <h2>Opciones de Tabla</h2>
                 <div>
                     <label for="colorBordes">Color de Bordes:</label>
-                    <input type="color" id="colorBordes">
+                    <input type="color" id="InputColorBordes">
                 </div>
                 <div>
                     <label for="colorFondo">Color de Fondo:</label>
-                    <input type="color" id="colorFondo">
+                    <input type="color" id="InputColorFondo">
                 </div>
                 <div>
                     <label for="tamanhoLetra">Tamaño de Letra:</label>
@@ -40,41 +40,63 @@
                 </div>
                 <div>
                     <label for="colorLetra">Color de Letra:</label>
-                    <input type="color" id="colorLetra">
+                    <input type="color" id="InputColorLetra">
+                </div>
+                <div>
+                    <label for="colorCabeceraTabla">Color de Cabecera:</label>
+                    <input type="color" id="InputColorCabeceraTabla">
                 </div>
             </div>
             <div class="opcionesTema">
                 <h2>Opciones de Tema</h2>
                 <div>
                     <label for="colorCabecera">Color de Cabecera:</label>
-                    <input type="color" id="colorcabecera">
+                    <input type="color" id="InputColorcabecera">
                 </div>
                 <div>
                     <label for="colorFondoPagina">Color de Fondo Página:</label>
-                    <input type="color" id="colorFondoPagina">
+                    <input type="color" id="InputColorFondoPagina">
                 </div>
                 <div>
                     <label for="colorContenedorOpciones">Color de Contenedor Opciones:</label>
-                    <input type="color" id="colorContenedorOpciones">
+                    <input type="color" id="InputColorContenedorOpciones">
+                </div>
+                <div>
+                    <label for="colorFondoEsconder">Color de fondo de esconder columnas:</label>
+                    <input type="color" id="InputColorFondoEsconder">
+                </div>
+                <div>
+                    <label for="colorBotonAplicarEstilos">Color de boton Aplicar:</label>
+                    <input type="color" id="InputColorBotonAplicarEstilos">
                 </div>
             </div>
         </div>
         
-        <button onclick="aplicarEstilos()">Aplicar Estilos</button>
+        <button id="botonAplicar" onclick="aplicarEstilos()">Aplicar Estilos</button>
     </div>
     
 
     <table id="tablaDatos">
-        <thead>
-            <tr>
-                <th>Ciudad y Domicilio</th>
-                <th>Descripción de Reparaciones</th>
-                <th>Fecha Reparaciones</th>
-                <th>Horas de Trabajo</th>
-                <th>Coste Total Reparaciones</th>
+        <thead id="cabeceraTabla">
+            <tr id="trTabla">
+              <th onclick="ordenarTabla(0)">
+                <div>Ciudad y Domicilio <img src="img/triangulo.png" id="trianguloCiudad" style="visibility: hidden;"></div>
+              </th>
+              <th onclick="ordenarTabla(1)">
+                <div>Descripción de Reparaciones <img src="img/triangulo.png" id="trianguloDescripcion" style="visibility: hidden;"></div>
+              </th>
+              <th onclick="ordenarTabla(2)">
+                <div>Fecha Reparaciones <img src="img/triangulo.png" id="trianguloFecha" style="visibility: hidden;"></div>
+              </th>
+              <th onclick="ordenarTabla(3)">
+                <div>Horas de Trabajo <img src="img/triangulo.png" id="trianguloHoras" style="visibility: hidden;"></div>
+              </th>
+              <th onclick="ordenarTabla(4)">
+                <div>Coste Total Reparaciones <img src="img/triangulo.png" id="trianguloCoste" style="visibility: hidden;"></div>
+              </th>
             </tr>
-        </thead>
-        <tbody>
+          </thead>
+        <tbody id="fondoTabla">
             <tr>
                 <td>Barcelona - Calle Gaudí, 123</td>
                 <td>Reparación de instalación eléctrica</td>
@@ -155,7 +177,7 @@
         </tbody>
     </table>
 
-    <div id="contenedorOculatarColumnas">
+    <div id="contenedorOcultarColumnas">
         <div>
             <input id="domicilio" type="checkbox" />domicilio
         </div>
@@ -225,7 +247,7 @@
                 }
             });
         });
-    </script>
+    </script>
 
 </body>
 </html>
