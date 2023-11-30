@@ -17,8 +17,9 @@ div {
 th img {
     width: 20px;
     height: 20px;
-    margin-left: 5px; /* Ajusta el margen según tus preferencias */
-  }
+    margin-left: 5px;
+    /* Ajusta el margen según tus preferencias */
+}
 
 /* Estilo para el cuerpo de la página */
 body {
@@ -104,12 +105,14 @@ button:hover {
 
 #contenedorEstilos {
     display: flex;
-    flex-direction: column; /* Cambia la dirección del contenedor a columna */
+    flex-direction: column;
+    /* Cambia la dirección del contenedor a columna */
     margin-top: 20px;
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 20px;
 }
 
 #contenedorOpciones {
@@ -135,3 +138,10 @@ button:hover {
     margin-right: 10px;
 }
 
+#selectorDeFuentes {
+    font-size: 24px;
+}
+
+#contenedorOcultarColumnas {
+    font-size: 24px;
+}

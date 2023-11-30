@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <script src="funciones.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
+
 <body>
     <header id="cabeceraPagina">
         <h1>BricoArte</h1>
@@ -18,11 +20,11 @@
                 <h2>Opciones de Tabla</h2>
                 <div>
                     <label for="colorBordes">Color de Bordes:</label>
-                    <input type="color" id="InputColorBordes">
+                    <input type="color" id="InputColorBordes" value="#FFFFFF">
                 </div>
                 <div>
                     <label for="colorFondo">Color de Fondo:</label>
-                    <input type="color" id="InputColorFondo">
+                    <input type="color" id="InputColorFondo" value="#FFFFFF">
                 </div>
                 <div>
                     <label for="tamanhoLetra">Tamaño de Letra:</label>
@@ -36,66 +38,82 @@
                 </div>
                 <div>
                     <label for="fuente">Fuente:</label>
-                    <input type="text" id="fuente">
+                    <select id="selectorDeFuentes">
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Palatino Linotype">Palatino Linotype</option>
+                        <option value="Calibri">Calibri</option>
+                        <option value="Garamond">Garamond</option>
+                    </select>
                 </div>
                 <div>
                     <label for="colorLetra">Color de Letra:</label>
-                    <input type="color" id="InputColorLetra">
+                    <input type="color" id="InputColorLetra" value="#000000">
                 </div>
                 <div>
                     <label for="colorCabeceraTabla">Color de Cabecera:</label>
-                    <input type="color" id="InputColorCabeceraTabla">
+                    <input type="color" id="InputColorCabeceraTabla" value="#4CAF50">
                 </div>
             </div>
             <div class="opcionesTema">
                 <h2>Opciones de Tema</h2>
                 <div>
                     <label for="colorCabecera">Color de Cabecera:</label>
-                    <input type="color" id="InputColorcabecera">
+                    <input type="color" id="InputColorcabecera" value="#4CAF50">
                 </div>
                 <div>
                     <label for="colorFondoPagina">Color de Fondo Página:</label>
-                    <input type="color" id="InputColorFondoPagina">
+                    <input type="color" id="InputColorFondoPagina" value="#FFFFFF">
                 </div>
                 <div>
                     <label for="colorContenedorOpciones">Color de Contenedor Opciones:</label>
-                    <input type="color" id="InputColorContenedorOpciones">
+                    <input type="color" id="InputColorContenedorOpciones" value="#FFFFFF">
                 </div>
                 <div>
                     <label for="colorFondoEsconder">Color de fondo de esconder columnas:</label>
-                    <input type="color" id="InputColorFondoEsconder">
+                    <input type="color" id="InputColorFondoEsconder" value="#4CAF50">
                 </div>
                 <div>
                     <label for="colorBotonAplicarEstilos">Color de boton Aplicar:</label>
-                    <input type="color" id="InputColorBotonAplicarEstilos">
+                    <input type="color" id="InputColorBotonAplicarEstilos" value="#4CAF50">
                 </div>
             </div>
         </div>
-        
+
         <button id="botonAplicar" onclick="aplicarEstilos()">Aplicar Estilos</button>
     </div>
-    
+
 
     <table id="tablaDatos">
         <thead id="cabeceraTabla">
             <tr id="trTabla">
-              <th onclick="ordenarTabla(0)">
-                <div>Ciudad y Domicilio <img src="img/triangulo.png" id="trianguloCiudad" style="visibility: hidden;"></div>
-              </th>
-              <th onclick="ordenarTabla(1)">
-                <div>Descripción de Reparaciones <img src="img/triangulo.png" id="trianguloDescripcion" style="visibility: hidden;"></div>
-              </th>
-              <th onclick="ordenarTabla(2)">
-                <div>Fecha Reparaciones <img src="img/triangulo.png" id="trianguloFecha" style="visibility: hidden;"></div>
-              </th>
-              <th onclick="ordenarTabla(3)">
-                <div>Horas de Trabajo <img src="img/triangulo.png" id="trianguloHoras" style="visibility: hidden;"></div>
-              </th>
-              <th onclick="ordenarTabla(4)">
-                <div>Coste Total Reparaciones <img src="img/triangulo.png" id="trianguloCoste" style="visibility: hidden;"></div>
-              </th>
+                <th onclick="ordenarTabla(0)">
+                    <div>Ciudad y Domicilio <img src="img/triangulo.png" id="trianguloCiudad"
+                            style="visibility: hidden;"></div>
+                </th>
+                <th onclick="ordenarTabla(1)">
+                    <div>Descripción de Reparaciones <img src="img/triangulo.png" id="trianguloDescripcion"
+                            style="visibility: hidden;"></div>
+                </th>
+                <th onclick="ordenarTabla(2)">
+                    <div>Fecha Reparaciones <img src="img/triangulo.png" id="trianguloFecha"
+                            style="visibility: hidden;"></div>
+                </th>
+                <th onclick="ordenarTabla(3)">
+                    <div>Horas de Trabajo <img src="img/triangulo.png" id="trianguloHoras" style="visibility: hidden;">
+                    </div>
+                </th>
+                <th onclick="ordenarTabla(4)">
+                    <div>Coste Total Reparaciones <img src="img/triangulo.png" id="trianguloCoste"
+                            style="visibility: hidden;"></div>
+                </th>
             </tr>
-          </thead>
+        </thead>
         <tbody id="fondoTabla">
             <tr>
                 <td>Barcelona - Calle Gaudí, 123</td>
@@ -196,8 +214,8 @@
     </div>
 
     <script>
-        $(document).ready(function(){
-            $("#domicilio").change(function(){
+        $(document).ready(function () {
+            $("#domicilio").change(function () {
                 var columnIndex = 0;
                 var cells = $("#tablaDatos tbody tr td:nth-child(" + (columnIndex + 1) + "), #tablaDatos thead tr th:nth-child(" + (columnIndex + 1) + ")");
                 if ($(this).is(":checked")) {
@@ -207,7 +225,7 @@
                 }
             });
 
-            $("#descripcion").change(function(){
+            $("#descripcion").change(function () {
                 var columnIndex = 1;
                 var cells = $("#tablaDatos tbody tr td:nth-child(" + (columnIndex + 1) + "), #tablaDatos thead tr th:nth-child(" + (columnIndex + 1) + ")");
                 if ($(this).is(":checked")) {
@@ -217,7 +235,7 @@
                 }
             });
 
-            $("#fecha").change(function(){
+            $("#fecha").change(function () {
                 var columnIndex = 2;
                 var cells = $("#tablaDatos tbody tr td:nth-child(" + (columnIndex + 1) + "), #tablaDatos thead tr th:nth-child(" + (columnIndex + 1) + ")");
                 if ($(this).is(":checked")) {
@@ -227,7 +245,7 @@
                 }
             });
 
-            $("#horas").change(function(){
+            $("#horas").change(function () {
                 var columnIndex = 3;
                 var cells = $("#tablaDatos tbody tr td:nth-child(" + (columnIndex + 1) + "), #tablaDatos thead tr th:nth-child(" + (columnIndex + 1) + ")");
                 if ($(this).is(":checked")) {
@@ -237,7 +255,7 @@
                 }
             });
 
-            $("#coste").change(function(){
+            $("#coste").change(function () {
                 var columnIndex = 4;
                 var cells = $("#tablaDatos tbody tr td:nth-child(" + (columnIndex + 1) + "), #tablaDatos thead tr th:nth-child(" + (columnIndex + 1) + ")");
                 if ($(this).is(":checked")) {
@@ -250,4 +268,5 @@
     </script>
 
 </body>
+
 </html>
